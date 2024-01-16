@@ -1,4 +1,5 @@
 // Task.js
+import { Button, Input } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 const Task = ({ task, onToggle, onEdit }) => {
@@ -19,17 +20,18 @@ const Task = ({ task, onToggle, onEdit }) => {
       />
       {isEditing ? (
         <>
-          <input
+          <Input 
+            maxW="25%"
             type="text"
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
           />
-          <button onClick={handleEdit}>Confirm Edit</button>
+          <Button onClick={handleEdit}>Confirm Edit</Button>
         </>
       ) : (
         <>
           <span>{task.description}</span>
-          <button onClick={() => setEditing(true)}>Edit</button>
+          <Button mx="20px" onClick={() => setEditing(true)}>Edit</Button>
         </>
       )}
     </div>

@@ -1,4 +1,5 @@
 // AddTask.js
+import { Button, Input } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 const AddTask = ({ onAdd }) => {
@@ -14,12 +15,13 @@ const AddTask = ({ onAdd }) => {
 
   return (
     <div>
-      <input
+      <Input
+        maxW="25%"
         type="text"
         value={newTask}
         onChange={e => setNewTask(e.target.value)}
       />
-      <button onClick={handleAdd}>Add Task</button>
+      <Button onClick={handleAdd}>Add Task</Button>
     </div>
   );
 };

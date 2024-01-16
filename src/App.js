@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AddTask from './AddList';
 import ListTask from './ListTask';
+import { Box, Center, Text, Button } from '@chakra-ui/react';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -23,13 +24,21 @@ const App = () => {
 
   return (
     <div>
-      <h1>ToDo App</h1>
+      <Box w="100%" h="60px" bg="blue.400" textAlign="center" > 
+        <Text as='b' fontSize="x-large">ToDo App</Text>
+      </Box>
       <AddTask onAdd={handleAdd} />
-      <div>
-        <button onClick={() => setFilter('all')}>All</button>
-        <button onClick={() => setFilter('done')}>Done</button>
-        <button onClick={() => setFilter('notDone')}>Not Done</button>
-      </div>
+      <Box display="flex" justifyContent="space-between" maxW="25%" padding={4}>
+      <Button onClick={() => setFilter('all')} marginRight={2}>
+        All
+      </Button>
+      <Button onClick={() => setFilter('done')} marginRight={2}>
+        Done
+      </Button>
+      <Button onClick={() => setFilter('notDone')}>
+        Not Done
+      </Button>
+    </Box>
       <ListTask tasks={tasks} filter={filter} onToggle={handleToggle} onEdit={handleEdit} />
     </div>
   );
