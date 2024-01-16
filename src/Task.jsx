@@ -14,6 +14,7 @@ const Task = ({ task, onToggle, onEdit }) => {
   return (
     <div>
       <input
+        
         type="checkbox"
         checked={task.isDone}
         onChange={() => onToggle(task.id)}

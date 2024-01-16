@@ -1,6 +1,7 @@
 // ListTask.js
 import React from 'react';
 import Task from './Task';
+import { Box } from '@chakra-ui/react';
 
 const ListTask = ({ tasks, filter, onToggle, onEdit }) => {
   const filteredTasks = tasks.filter(task => {
@@ -14,11 +15,11 @@ const ListTask = ({ tasks, filter, onToggle, onEdit }) => {
   });
 
   return (
-    <div>
+    <Box>
       {filteredTasks.map(task => (
         <Task key={task.id} task={task} onToggle={onToggle} onEdit={onEdit} />
       ))}
-    </div>
+    </Box>
   );
 };
 

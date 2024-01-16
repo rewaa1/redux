@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AddTask from './AddList';
 import ListTask from './ListTask';
-import { Box, Center, Text, Button } from '@chakra-ui/react';
+import { Box, Center, Text, Button, Flex } from '@chakra-ui/react';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -38,8 +38,14 @@ const App = () => {
       <Button onClick={() => setFilter('notDone')}>
         Not Done
       </Button>
-    </Box>
-      <ListTask tasks={tasks} filter={filter} onToggle={handleToggle} onEdit={handleEdit} />
+      </Box>
+      <Box 
+      h="100vh"
+      display="flex"
+      justifyContent="center"
+      >
+        <ListTask tasks={tasks} filter={filter} onToggle={handleToggle} onEdit={handleEdit} />
+      </Box>
     </div>
   );
 };
