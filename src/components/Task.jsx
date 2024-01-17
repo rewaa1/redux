@@ -20,31 +20,33 @@ const Task = ({ task, toggleTask, deleteTask, editTask }) => {
   };
 
   return (
-    <div className="flex items-center justify-between border p-2 mb-2 bg-gray-100 rounded">
-      <span
-        className={`flex-1 ${task.isDone ? 'line-through text-gray-500' : ''}`}
-      >
-        {task.description}
-      </span>
-      <div>
-        <button
-          className={`bg-${task.isDone ? 'yellow' : 'green'}-500 text-white px-3 py-1 rounded mr-2`}
-          onClick={handleToggle}
+    <div className="border rounded p-4 mb-4 bg-white shadow-md">
+      <div className="flex items-center justify-between mb-2">
+        <span
+          className={`flex-1 text-xl ${task.isDone ? 'line-through text-gray-500' : 'font-semibold'} `}
         >
-          {task.isDone ? 'Undo' : 'Done'}
-        </button>
-        <button
-          className="bg-blue-500 text-white px-3 py-1 rounded mr-2"
-          onClick={handleEdit}
-        >
-          Edit
-        </button>
-        <button
-          className="bg-red-500 text-white px-3 py-1 rounded"
-          onClick={handleDelete}
-        >
-          Delete
-        </button>
+          {task.description}
+        </span>
+        <div className="flex gap-2">
+          <button
+            className={`bg-${task.isDone ? 'orange' : 'green'}-500 text-white px-3 py-1 rounded-full`}
+            onClick={handleToggle}
+          >
+            {task.isDone ? 'Undo' : 'Done'}
+          </button>
+          <button
+            className="bg-indigo-500 text-white px-3 py-1 rounded-full"
+            onClick={handleEdit}
+          >
+            Edit
+          </button>
+          <button
+            className="bg-red-500 text-white px-3 py-1 rounded-full"
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   );

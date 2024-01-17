@@ -14,16 +14,16 @@ const AddTask = ({ addTask }) => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="flex items-center justify-center h-20 bg-blue-500 text-white">
       <input
-        className="border border-gray-300 p-2"
+        className="border border-gray-300 text-black p-2 rounded-l w-64"
         type="text"
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
         placeholder="Enter a new task"
       />
       <button
-        className="bg-blue-500 text-white px-4 py-2 ml-2"
+        className="bg-white text-blue-500 px-4 py-2 rounded-r"
         onClick={handleAdd}
       >
         Add Task

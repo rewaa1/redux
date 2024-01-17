@@ -12,22 +12,22 @@ const ListTask = ({ tasks }) => {
   });
 
   return (
-    <div>
-      <div className="mb-4">
+    <div className="p-4 bg-gray-100">
+      <div className="mb-4 flex justify-center">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded mr-2"
+          className="bg-indigo-500 text-white px-4 py-2 rounded-l"
           onClick={() => setFilter('all')}
         >
           All
         </button>
         <button
-          className="bg-green-500 text-white px-4 py-2 rounded mr-2"
+          className="bg-green-500 text-white px-4 py-2"
           onClick={() => setFilter('done')}
         >
           Done
         </button>
         <button
-          className="bg-red-500 text-white px-4 py-2 rounded"
+          className="bg-red-500 w-72 text-white px-4 py-2 rounded-r"
           onClick={() => setFilter('notDone')}
         >
           Not Done
