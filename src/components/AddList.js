@@ -16,7 +16,7 @@ const AddTask = ({ addTask }) => {
   return (
     <div className="flex items-center justify-center h-20 bg-blue-500 text-white">
       <input
-        className="border border-gray-300 text-black p-2 rounded-l w-64"
+        className="border border-gray-300 text-black p-2 rounded-l w-64 "
         type="text"
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}

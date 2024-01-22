@@ -12,7 +12,7 @@ const ListTask = ({ tasks }) => {
   });
 
   return (
-    <div className="p-4 bg-gray-100">
+    <div className="p-4 bg-gray-100 h-screen">
       <div className="mb-4 flex justify-center">
         <button
           className="bg-indigo-500 text-white px-4 py-2 rounded-l"

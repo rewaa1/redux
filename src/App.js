@@ -11,11 +11,11 @@ const App = () => {
     <Provider store={store}>
       <div className=' bg-black'>
         <h1 className=' text-cyan-500'>Todo App</h1>
-        <div>
+        
         <AddTask />
         <ListTask />
         </div>
-      </div>
+     
     </Provider>
   );
 };
